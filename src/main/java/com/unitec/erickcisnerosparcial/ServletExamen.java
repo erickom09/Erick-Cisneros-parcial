@@ -26,13 +26,13 @@ public class ServletExamen extends HttpServlet {
     
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-       String nombre= request.getParameter("nombre");
-        String calificacion=request.getParameter("calificacion");
+       response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+        
         Evaluacion e=new Evaluacion();
         e.setNombre("Ana");
-        e.setCalificacion("7");
-                
+        e.setCalificacion(7);
+        
                 
            
     }
